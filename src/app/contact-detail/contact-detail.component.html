@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>{{ contact.id }}</h1>
+  <dl class="list">
+    <dt>PostId</dt>
+    <dd>{{ contact.postId }}</dd>
+    <dt>Id</dt>
+    <dd>{{ contact.id }}</dd>
+    <dt>Name</dt>
+    <dd>{{ contact.name }}</dd>
+    <dt>Email</dt>
+    <dd>{{ contact.email }}</dd>
+    <dt>Body</dt>
+    <dd>{{ contact.body }}</dd>
+  </dl>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <a [routerLink]="['/contact-edit', contact.id]" class="btn btn-success">EDIT</a>
+    <button class="btn btn-danger" type="button" (click)="deleteContact(contact.id)">DELETE</button>
+  </div>
+</div>
