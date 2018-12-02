@@ -7,9 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
-import { ContactDetailComponent } from './contact-detail/contact-detail.component';
-import { ContactCreateComponent } from './contact-create/contact-create.component';
-import { ContactEditComponent } from './contact-edit/contact-edit.component';
+
 
 const appRoutes: Routes = [
   {
@@ -17,21 +15,7 @@ const appRoutes: Routes = [
     component: ContactComponent,
     data: { title: 'Contact List' }
   },
-  {
-    path: 'contact-detail/:id',
-    component: ContactDetailComponent,
-    data: { title: 'Contact Details' }
-  },
-  {
-    path: 'contact-create',
-    component: ContactCreateComponent,
-    data: { title: 'Create Contact' }
-  },
-  {
-    path: 'contact-edit/:id',
-    component: ContactEditComponent,
-    data: { title: 'Edit Contact' }
-  },
+  
   { path: '',
     redirectTo: '/contact',
     pathMatch: 'full'
@@ -41,10 +25,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    ContactComponent,
-    ContactDetailComponent,
-    ContactCreateComponent,
-    ContactEditComponent
+    ContactComponent
+   
   ],
   imports: [
     BrowserModule,
